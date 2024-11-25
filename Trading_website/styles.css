@@ -12,16 +12,19 @@ body {
     min-height: 100vh; /* Ensure full viewport height */
 }
 
+/* Reset some styles */
 h1, h2, p {
     margin: 0;
     padding: 0;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -40,13 +43,12 @@ a {
 .logo h1 {
     font-size: 36px;
     font-weight: 600;
-    color: #fff;
     margin: 0;
+    color: #fff;
 }
 
 .title-line {
     display: block;
-    color: #fff;
 }
 
 /* Navigation Section */
@@ -80,6 +82,26 @@ a {
     background-color: #ff7f00;
     color: #fff;
     border-color: #ff7f00;
+}
+
+/* Portfolio Value Section */
+.portfolio-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    margin-top: 40px; /* Add margin to the top */
+}
+
+.portfolio-value h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-value p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
 /* Interest Button */
@@ -131,6 +153,19 @@ a {
     line-height: 1.6;
 }
 
+/* Portfolio Graph Section */
+.portfolio-graph {
+    margin-top: 40px;
+}
+
+/* Increase canvas size */
+canvas {
+    display: block;
+    margin: 0 auto;
+    width: 90% !important; /* Increase the width to 90% of the container */
+    height: 50% !important; /* Set a fixed height or adjust as needed */
+}
+
 /* Footer */
 .footer {
     background-color: #333;
@@ -139,6 +174,32 @@ a {
     padding: 20px 0;
     font-size: 14px;
     width: 100%;
+}
+
+/* Intro Tile Styling */
+.intro-tile {
+    background-color: #f4f4f9;  /* Light background color */
+    border: 1px solid #ddd;      /* Border around the tile */
+    padding: 20px;                /* Padding inside the tile */
+    border-radius: 8px;          /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 0 auto 30px;          /* Center the tile horizontally, with space below */
+    text-align: center;           /* Center text inside the tile */
+    max-width: 80%;             /* Set the maximum width of the tile */
+    width: 90%;                   /* Make the tile responsive and adjust to the screen size */
+}
+
+/* Title and description within the tile */
+.intro-tile h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;  /* Adds space between the title and description */
+}
+
+.intro-tile p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
 }
 
 /* Responsive Design for smaller screens */

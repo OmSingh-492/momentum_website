@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Value</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>
+                <span class="title-line">Momentum</span>
+                <span class="title-line">Investments</span>
+            </h1>
+        </div>
+
+        <div class="navigation-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="contact.html" class="nav-button">Contact Us</a>
+            <a href="portfolio.html" class="nav-button big-button">Portfolio Value (per Unit)</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <!-- Portfolio Value Section -->
+        <section class="portfolio-value">
+            <div class="intro-tile">
+                <h2>Portfolio Description</h2>
+                <p>The structure of our fund is intended to be in such a manner that we scale down our investments into units, and monitor the price of each unit. This shall make the structure of the fund much more efficient, and easily understandable.</p>
+                <p>Also, there are several positions we carry forward and hold over multiple days. So, in the chart below, you can see the total value of the portfolio per unit, alongwith three other lines, representing the Available Margin, Used Margin and the Unrealised P&L of the positions.</p>
+                <p>Currently, we have allotted 10,000 units to this fund of ours!</p>
+            </div>
+
+            <!-- Portfolio Graph (Chart.js) -->
+            <div class="portfolio-graph">
+                <h3>Portfolio Value (Cost per unit) [Updated by 09:00 IST on the next trading day]</h3>
+                <canvas id="portfolioLineGraph" width="400" height="200"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Momentum Investments. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // Fetch the current portfolio value (could be static or dynamic)
+            fetchPortfolioValue();
+            // Render the line graph
+            renderLineGraph();
+        };
+
+        function fetchPortfolioValue() {
+            // Simulate an API call or data fetch
+            setTimeout(function() {
+                // Update the portfolio value dynamically (Example value)
+                const portfolioValue = 1500; // Replace with your actual value
+                document.getElementById("portfolio-value").innerText = portfolioValue;
+            }, 2000); // Simulate a delay for data fetching
+        }
+
+        function renderLineGraph() {
+            // Example data for multiple metrics (Unrealized P&L, Available Margin, Used Margin, Portfolio Value)
+            const labels = ["2024-11-24"];
+            const unrealizedPnL = [0];  // Example Unrealized P&L data
+            const availableMargin = [63.9366];  // Example Available Margin data
+            const usedMargin = [0];      // Example Used Margin data
+            const portfolioValues = [63.3966];  // Example Portfolio Value data
+
+            // Get the canvas element
+            const ctx = document.getElementById('portfolioLineGraph').getContext('2d');
+
+            // Create a new Chart.js line graph
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,  // X-axis labels (dates)
+                    datasets: [{
+                        label: 'Unrealized P&L',
+                        data: unrealizedPnL,  // Y-axis data (Unrealized P&L)
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }, {
+                        label: 'Available Margin',
+                        data: availableMargin,  // Y-axis data (Available Margin)
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }, {
+                        label: 'Used Margin',
+                        data: usedMargin,  // Y-axis data (Used Margin)
+                        borderColor: 'rgba(255, 159, 64, 1)',
+                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }, {
+                        label: 'Portfolio Value (in Units)',
+                        data: portfolioValues,  // Y-axis data (Portfolio Value)
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        fill: true,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Date'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Value on a per unit basis'
+                            },
+                            beginAtZero: false
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
