@@ -177,7 +177,7 @@ canvas {
 }
 
 /* Intro Tile Styling */
-.intro-tile {
+.intro-tile, .contact-tile {
     background-color: #f4f4f9;  /* Light background color */
     border: 1px solid #ddd;      /* Border around the tile */
     padding: 20px;                /* Padding inside the tile */
@@ -185,21 +185,35 @@ canvas {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin: 0 auto 30px;          /* Center the tile horizontally, with space below */
     text-align: center;           /* Center text inside the tile */
-    max-width: 80%;             /* Set the maximum width of the tile */
-    width: 90%;                   /* Make the tile responsive and adjust to the screen size */
+    width: 100%;                  /* Make both tiles take up 100% of their container */
+    max-width: 800px;             /* Set a maximum width for the tile */
 }
 
 /* Title and description within the tile */
-.intro-tile h2 {
+.intro-tile h2, .contact-tile h2 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 15px;  /* Adds space between the title and description */
 }
 
-.intro-tile p {
+.intro-tile p, .contact-tile p {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.5;
+}
+
+.contact-tile ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-tile a {
+    color: #1d72b8;
+    text-decoration: none;
+}
+
+.contact-tile a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design for smaller screens */
