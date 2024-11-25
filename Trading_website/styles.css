@@ -1,99 +1,159 @@
-/* General Body Styling */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: linear-gradient(to left, #5e5e5e, #2a2a2a, #121212);
-    color: #e0e0e0;
-}
-
-/* Header Styling */
-.header {
-    background: #1f1f1f;
-    padding: 20px 40px;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+    justify-content: flex-start; /* Start aligning content from the top */
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
-/* Logo Styling */
-.logo h1 {
+h1, h2, p {
     margin: 0;
-    font-size: 3em;
-    color: #00ffab; /* Neon Green */
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    line-height: 1.1; /* Closer line height for a logo feel */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    padding: 0;
 }
 
-/* Make each word on a separate line */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
 .title-line {
     display: block;
+    color: #fff;
 }
 
-/* Content Styling */
-.content {
-    padding: 30px 20px;
-    max-width: 900px;
-    margin: 0 auto;
+/* Navigation Section */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.intro, .mission, .transparency, .cta {
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 8px;
-    background: #1e1e1e;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-    opacity: 0.95;
+.nav-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
 }
 
-/* Section Styling */
-h2 {
-    font-size: 2.2em;
-    color: #00d4ff;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+.nav-button:hover {
+    background-color: #ff7f00;
+    color: #fff;
+    border-color: #ff7f00;
 }
 
-/* Paragraph Styling */
-p {
-    font-size: 1.1em;
-    color: #cccccc;
-    line-height: 1.8;
-    margin-bottom: 15px;
+.nav-button.active {
+    background-color: #ff7f00;
+    color: #fff;
+    border-color: #ff7f00;
 }
 
-p strong {
-    color: #ff9f1c;
-}
-
-/* Buttons */
+/* Interest Button */
 .interest-button {
-    padding: 14px 25px;
-    background-color: #ff9f1c;
-    color: #121212;
+    background-color: #ff7f00;
+    color: #fff;
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: 600;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .interest-button:hover {
-    background-color: #ff851b;
+    background-color: #e66a00;
+    transform: scale(1.05);
 }
 
-/* Footer Styling */
+.interest-button:active {
+    background-color: #cc5e00;
+    transform: scale(1);
+}
+
+/* Content Sections (Intro, Mission, Transparency, CTA) */
+.intro, .mission, .transparency, .cta {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.intro h2, .mission h2, .transparency h2, .cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.intro p, .mission p, .transparency p, .cta p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer */
 .footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
-    background: #1f1f1f;
-    color: #e0e0e0;
-    margin-top: 20px;
-    font-size: 0.9em;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-button {
+        margin: 10px 0;
+    }
+
+    .intro, .mission, .transparency, .cta {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
 }
