@@ -34,6 +34,8 @@ body {
     border-radius: 8px;
     background: #1f1f1f; /* Dark Gray Background for Sections */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Headings for Sections */
