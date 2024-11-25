@@ -1,123 +1,99 @@
 /* General Body Styling */
 body {
-    font-family: 'Poppins', sans-serif; /* Sleek, modern font */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #121212; /* Black Theme */
-    color: #e0e0e0; /* Softer white for readability */
+    background: linear-gradient(to left, #5e5e5e, #2a2a2a, #121212);
+    color: #e0e0e0;
 }
 
 /* Header Styling */
 .header {
-    background: #1f1f1f; /* Dark Gray */
-    color: #00ffab; /* Bright Neon Green */
-    text-align: center;
-    padding: 30px 0;
+    background: #1f1f1f;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
 }
 
-.header h1 {
+/* Logo Styling */
+.logo h1 {
     margin: 0;
-    font-size: 3em; /* Larger header font size */
-    letter-spacing: 2px; /* Better spacing for modern look */
+    font-size: 3em;
+    color: #00ffab; /* Neon Green */
+    font-weight: 600;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    line-height: 1.1; /* Closer line height for a logo feel */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Main Content Styling */
+/* Make each word on a separate line */
+.title-line {
+    display: block;
+}
+
+/* Content Styling */
 .content {
     padding: 30px 20px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* Section Styling */
 .intro, .mission, .transparency, .cta {
     margin-bottom: 30px;
     padding: 25px;
     border-radius: 8px;
-    background: #1e1e1e; /* Slightly lighter black for contrast */
+    background: #1e1e1e;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     opacity: 0.95;
-    transition: all 0.3s ease-in-out;
 }
 
-/* Headings for Sections */
+/* Section Styling */
 h2 {
-    font-size: 2.2em; /* Larger and more prominent section headings */
-    color: #00d4ff; /* Bright Cyan for Section Headings */
+    font-size: 2.2em;
+    color: #00d4ff;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stylish heading shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Paragraph Styling */
 p {
-    font-size: 1.1em; /* Slightly larger paragraph font for readability */
-    color: #cccccc; /* Soft white for contrast */
-    line-height: 1.8; /* Improved readability */
+    font-size: 1.1em;
+    color: #cccccc;
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
 p strong {
-    color: #ff9f1c; /* Highlighted text with a pop of orange */
+    color: #ff9f1c;
 }
 
 /* Buttons */
 .interest-button {
-    display: inline-block;
     padding: 14px 25px;
-    background-color: #ff9f1c; /* Vibrant orange button */
-    color: #121212; /* Dark text for contrast */
+    background-color: #ff9f1c;
+    color: #121212;
     border: none;
     border-radius: 8px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    transition: background-color 0.3s ease-in-out, transform 0.2s;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); /* Button shadow for depth */
+    transition: background-color 0.3s ease-in-out;
 }
 
 .interest-button:hover {
-    background-color: #ff851b; /* Slightly darker orange on hover */
-    transform: translateY(-3px); /* Smooth hover effect */
+    background-color: #ff851b;
 }
 
 /* Footer Styling */
 .footer {
     text-align: center;
     padding: 20px 0;
-    background: #1f1f1f; /* Dark Gray Footer */
+    background: #1f1f1f;
     color: #e0e0e0;
     margin-top: 20px;
     font-size: 0.9em;
-    border-top: 2px solid #ff9f1c; /* Orange border for style */
-}
-
-/* Add Text Highlights for Different Sections */
-.intro p {
-    color: #d4d4d4;
-}
-
-.mission p {
-    color: #a8dadc;
-}
-
-.transparency p {
-    color: #f1faee;
-}
-
-.cta p {
-    color: #ffe66d; /* Bright yellow for call-to-action */
-}
-
-/* Add Smooth Animations */
-.intro, .mission, .transparency, .cta {
-    position: relative;
-    overflow: hidden;
-}
-
-.intro:hover, .mission:hover, .transparency:hover, .cta:hover {
-    background: linear-gradient(135deg, #1f1f1f, #2a2a2a); /* Dynamic background */
-    transform: scale(1.02); /* Slight zoom-in effect */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
 }
