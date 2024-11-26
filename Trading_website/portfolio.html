@@ -65,11 +65,11 @@
 
         function renderLineGraph() {
             // Example data for multiple metrics (Unrealized P&L, Available Margin, Used Margin, Portfolio Value)
-            const labels = ["2024-11-24"];
-            const unrealizedPnL = [0];  // Example Unrealized P&L data
-            const availableMargin = [63.9366];  // Example Available Margin data
-            const usedMargin = [0];      // Example Used Margin data
-            const portfolioValues = [63.3966];  // Example Portfolio Value data
+            const labels = ["24-11-2024", "25-11-2024"];
+            const unrealizedPnL = [0, 0.0048];  // Example Unrealized P&L data
+            const availableMargin = [23.9366, 14.317050];  // Example Available Margin data
+            const usedMargin = [0, 9.47440];      // Example Used Margin data
+            const portfolioValues = [23.3966, 23.79625];  // Example Portfolio Value data
 
             // Get the canvas element
             const ctx = document.getElementById('portfolioLineGraph').getContext('2d');
